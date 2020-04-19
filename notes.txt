@@ -1,0 +1,19 @@
+Start a new docker: docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=docker -d postgres
+
+Creating tables:
+
+
+Category:
+  id: uuid
+  title: varchar
+  created_at: Date
+  updated_at: Date
+
+Transaction:
+  id: uuid
+  title: varchar:
+  value: number
+  type: income | outcome
+  category: Category.id
+
+
